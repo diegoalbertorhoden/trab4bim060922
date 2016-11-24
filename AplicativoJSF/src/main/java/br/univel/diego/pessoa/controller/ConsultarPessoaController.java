@@ -44,6 +44,24 @@ public class ConsultarPessoaController implements Serializable {
 	public void setPessoaModel(PessoaModel pessoaModel) {
 		this.pessoaModel = pessoaModel;
 	}
+	public void Editar(PessoaModel pessoaModel){
+		 
+		/*PEGA APENAS A PRIMEIRA LETRA DO SEXO PARA SETAR NO CAMPO(M OU F)*/
+		pessoaModel.setSexo(pessoaModel.getSexo().substring(0, 1));
+ 
+		this.pessoaModel = pessoaModel;
+ 
+	}
+ 	/***
+	 * ATUALIZA O REGISTRO QUE FOI ALTERADO
+	 */
+	public void AlterarRegistro(){
+ 
+		this.pessoaRepository.AlterarRegistro(this.pessoaModel);	
+ 
+		/*RECARREGA OS REGISTROS*/
+		this.init();
+	}
 
 	/***
 	 * CARREGA AS PESSOAS NA INICIALIZAÇÃO 
