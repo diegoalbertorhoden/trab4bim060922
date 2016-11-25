@@ -25,7 +25,7 @@ import br.univel.diego.repository.PessoaRepository;
 /**
  * @author Diego Rhoden
  * classe criada para darmos vida ao botao do nosso header Exportar xml pessoa onde
- * temos a injeção de dependência, como xml é estruturado temos um foreach que configura
+ * temos a injeção de dependência, como xml é estruturado temos um for each que configura
  * inputstream outputstream lembro-me do exemplo do porco e da linguiça :D nunca esquecerei
  * 25 de nov de 2016 às 02:18:44
  */
@@ -52,7 +52,7 @@ public class ExportarRegistrosXmlController implements Serializable {
 	}
 
 	/***
-	 * GERANDO ARQUIVO XML PARA EXPORTAÇÃO.
+	 * GERANDO o ARQUIVO XML PARA EXPORTAÇÃO.
 	 * @return
 	 */
 	private File GerarXmlPessoas(){
